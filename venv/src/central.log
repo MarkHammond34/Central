@@ -1,0 +1,28 @@
+INFO:root: -- 2018-07-21 18:24:58 --> IP ADDRESS FOUND FOR central Function -> getIpAddress
+INFO:root: -- 2018-07-21 18:25:15 --> IP ADDRESS FOUND FOR central Function -> getIpAddress
+INFO:root: -- 2018-07-21 18:29:21 --> IP ADDRESS FOUND FOR central Function -> getIpAddress
+INFO:root: -- 2018-07-21 18:32:44 --> IP ADDRESS FOUND FOR central Function -> getIpAddress
+INFO:root: -- 2018-07-21 18:33:21 --> IP ADDRESS FOUND FOR central Function -> getIpAddress
+INFO:root: -- 2018-07-21 18:33:21 --> IP ADDRESS FOUND FOR central Function -> getIpAddress
+INFO:root: -- 2018-07-21 18:33:59 --> IP ADDRESS FOUND FOR central Function -> getIpAddress
+INFO:root: -- 2018-07-21 18:33:59 --> IP ADDRESS FOUND FOR central Function -> getIpAddress
+INFO:root: -- 2018-07-21 18:33:59 --> PI NAME FOUND FOR 10.0.0.55 Function -> getPiName
+INFO:root: -- 2018-07-21 18:34:21 --> IP ADDRESS FOUND FOR central Function -> getIpAddress
+INFO:root: -- 2018-07-21 18:34:21 --> IP ADDRESS FOUND FOR central Function -> getIpAddress
+INFO:root: -- 2018-07-21 18:34:21 --> PI NAME FOUND FOR 10.0.0.55 Function -> getPiName
+INFO:root: -- 2018-07-21 18:34:30 --> IP ADDRESS FOUND FOR central Function -> getIpAddress
+INFO:root: -- 2018-07-21 18:34:30 --> IP ADDRESS FOUND FOR central Function -> getIpAddress
+INFO:root: -- 2018-07-21 18:34:30 --> PI NAME FOUND FOR 10.0.0.55 Function -> getPiName
+INFO:root: -- 2018-07-21 19:07:00 --> IP ADDRESS FOUND FOR 'central' Function -> getIpAddress
+INFO:root: -- 2018-07-21 19:07:00 --> IP ADDRESS FOUND FOR 'central' Function -> getIpAddress
+INFO:root: -- 2018-07-21 19:07:00 --> PI NAME FOUND FOR '10.0.0.55' Function -> getPiName
+DEBUG:root: -- 2018-07-21 19:07:28 --> IP ADDRESS NOT FOUND FOR 'ssffd' Function -> getIpAddress
+INFO:root: -- 2018-07-21 19:07:28 --> IP ADDRESS FOUND FOR 'central' Function -> getIpAddress
+INFO:root: -- 2018-07-21 19:07:28 --> IP ADDRESS FOUND FOR 'pi_cam_1' Function -> getIpAddress
+DEBUG:root: -- 2018-07-21 19:07:28 --> PI NAME NOT FOUND FOR 'NULL' Function -> getPiName
+DEBUG:root: -- 2018-07-21 19:08:46 --> IP ADDRESS NOT FOUND FOR 'ssffd' Function -> getIpAddress
+INFO:root: -- 2018-07-21 19:08:46 --> IP ADDRESS FOUND FOR 'central' Function -> getIpAddress
+INFO:root: -- 2018-07-21 19:08:46 --> PI NAME FOUND FOR '10.0.0.55' Function -> getPiName
+INFO:root: -- 2018-07-21 19:09:10 --> IP ADDRESS FOUND FOR 'central' Function -> getIpAddress
+INFO:root: -- 2018-07-21 19:09:10 --> PI NAME FOUND FOR '10.0.0.55' Function -> getPiName
+DEBUG:root: -- 2018-07-21 19:09:40 --> IP ADDRESS NOT FOUND FOR 'ssffd' Function -> getIpAddress
