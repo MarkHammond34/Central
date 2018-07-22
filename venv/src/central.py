@@ -7,7 +7,7 @@ import configparser
 
 # Read in pi configurations
 parser = configparser.RawConfigParser()
-parser.read(r'C:\Users\Mark\PycharmProjects\CentralPi\venv\pi-config.ini')
+parser.read(r'/home/pi/Dev/Central/venv/src/pi-config.ini')
 
 # Gather data from openhab
 base_url = 'http://localhost:8080/rest'
