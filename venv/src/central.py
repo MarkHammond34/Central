@@ -11,7 +11,7 @@ parser.read(r'C:\Users\Mark\PycharmProjects\CentralPi\venv\pi-config.ini')
 
 # Gather data from openhab
 base_url = 'http://localhost:8080/rest'
-# openhab = openHAB(base_url)
+openhab = openHAB(base_url)
 
 # Set log configuration
 logger.basicConfig(filename='central.log', level=logger.DEBUG)
@@ -145,4 +145,5 @@ def sendMessage( piName, messageType, message):
         server_address = (ip, port)
         client.bind(server_address)
 
-ip = getIpAddress('ssffd')
+tv = getOpenhabItem('TV')
+print(tv.state)
