@@ -1,4 +1,4 @@
-import openhab as openHAB
+# import openhab as openHAB
 import socket
 import logging as logger
 import time
@@ -145,5 +145,4 @@ def sendMessage( piName, messageType, message):
         server_address = (ip, port)
         client.bind(server_address)
 
-tv = getOpenhabItem('TV')
-print(tv.state)
+print('test')
