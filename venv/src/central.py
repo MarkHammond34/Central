@@ -1,3 +1,5 @@
+#!/usr/lib/python
+
 # import openhab as openHAB
 import socket
 import logging as logger
@@ -10,7 +12,6 @@ parser = configparser.RawConfigParser()
 # parser.read(r'/home/pi/Dev/Central/venv/src/pi-config.ini')
 parser.read(r'C:/Users/Mark/PycharmProjects/CentralPi/venv/pi-config.ini')
 
-
 # Gather data from openhab
 base_url = 'http://localhost:8080/rest'
 # openhab = openHAB(base_url)
@@ -21,7 +22,8 @@ logger.basicConfig(filename='central.log', level=logger.DEBUG)
 # Set up tcp socket
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-def logEvent( eventType, eventMessage, functionName ):
+
+def logEvent(eventType, eventMessage, functionName):
     if eventType == 'SUCCESS':
         logger.info(' -- ' + datetime.datetime.fromtimestamp(time.time()).strftime(
             '%Y-%m-%d %H:%M:%S') + ' --> ' + eventMessage + ' Function -> ' + functionName)
@@ -32,7 +34,8 @@ def logEvent( eventType, eventMessage, functionName ):
         logger.warning(' -- ' + datetime.datetime.fromtimestamp(time.time()).strftime(
             '%Y-%m-%d %H:%M:%S') + ' --> ' + eventMessage + ' Function -> ' + functionName)
 
-def getOpenhabItem( itemName ):
+
+def getOpenhabItem(itemName):
     item = openhab.get_item(itemName)
     # if item is null log and return null
     if item.state == '':
@@ -43,7 +46,8 @@ def getOpenhabItem( itemName ):
         logEvent('SUCCESS', itemName + ' SUCCESSFULLY RETRIVED.', 'getOpenhabItem')
         return item;
 
-def toggleOpenhabItem( itemName ):
+
+def toggleOpenhabItem(itemName):
     item = getOpenhabItem(itemName)
     # if item was retreived, toggle
     if item != 'NULL':
@@ -74,8 +78,9 @@ def toggleOpenhabItem( itemName ):
     else:
         return 'ITEM NULL';
 
+
 # Returns the port of the raspberry pi by name
-def getTcpPort( piName ):
+def getTcpPort(piName):
     section = 'Pi TCP Ports'
     if piName in parser.options(section):
         # log info event -> TCP PORT FOUND FOR ' + piName + '
@@ -84,8 +89,9 @@ def getTcpPort( piName ):
         # log warning event -> TCP PORT NOT FOUND FOR + \'piName\'
         return 'NULL'
 
+
 # Returns the ip address of the raspberry pi by name
-def getIpAddress( piName ):
+def getIpAddress(piName):
     section = 'Pi IP Addresses'
     if piName in parser.options(section):
         logEvent('SUCCESS', 'IP ADDRESS FOUND FOR \'' + piName + '\'', 'getIpAddress')
@@ -94,8 +100,9 @@ def getIpAddress( piName ):
         logEvent('ERROR', 'IP ADDRESS NOT FOUND FOR \'' + piName + '\'', 'getIpAddress')
         return 'NULL'
 
+
 # Returns the name of the pi from the ip address
-def getPiName( ip ):
+def getPiName(ip):
     section = 'Pi IP Addresses'
     for piName in parser.options(section):
         # if name ip matches return name
@@ -106,9 +113,10 @@ def getPiName( ip ):
     logEvent('ERROR', 'PI NAME NOT FOUND FOR \'' + ip + '\'', 'getPiName')
     return 'NULL'
 
+
 def tcpListener():
     client.listen(1)
-    logEvent('SUCCESS', 'LISTENING FOR TCP CONNECTIONS...','tcpListener')
+    logEvent('SUCCESS', 'LISTENING FOR TCP CONNECTIONS...', 'tcpListener')
 
     while True:
         # waiting for a connection
@@ -119,7 +127,8 @@ def tcpListener():
                 # try to get name from ip
                 piName = getPiName(client_address)
                 if piName != 'NULL':
-                    logEvent('SUCCESS', 'CONNECTION ESTABLISHED FROM ' + piName + ' (' + client_address + ')', 'tcpListener')
+                    logEvent('SUCCESS', 'CONNECTION ESTABLISHED FROM ' + piName + ' (' + client_address + ')',
+                             'tcpListener')
                 else:
                     logEvent('SUCCESS', 'CONNECTION ESTABLISHED FROM ' + client_address, 'tcpListener')
 
@@ -137,8 +146,9 @@ def tcpListener():
                 logEvent('SUCCESS', 'CONNECTION CLOSED', 'tcpListener')
                 connection.close()
 
+
 # Attempts to send a message via tcp
-def sendMessage( piName, messageType, message):
+def sendMessage(piName, messageType, message):
     ip = getIpAddress(piName)
     port = getTcpPort(piName)
     print(ip)
@@ -172,6 +182,7 @@ def sendMessage( piName, messageType, message):
         finally:
             logEvent('SUCCESS', 'CONNECTION WITH \'' + piName + '\' CLOSED', 'sendMessage()')
             client.close()
+
 
 def init():
     con = (getIpAddress('central'), getTcpPort('central'))
