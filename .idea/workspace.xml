@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed1ef427-c24e-4312-925a-91bfc3598c49" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/venv/src/central.log" beforeDir="false" afterPath="$PROJECT_DIR$/venv/src/central.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/src/central.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/src/central.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/src/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,14 +18,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="central.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="central.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/src/central.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="169" column="99" selection-start-line="169" selection-start-column="99" selection-end-line="169" selection-end-column="99" />
+            <state relative-caret-position="-1921">
+              <caret column="17" selection-start-column="17" selection-end-column="17" />
               <folding>
                 <element signature="e#28#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/venv/src/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -70,6 +79,7 @@
         <option value="$PROJECT_DIR$/venv/src/tcp_server.py" />
         <option value="$PROJECT_DIR$/venv/pi-config.ini" />
         <option value="$PROJECT_DIR$/venv/src/central.py" />
+        <option value="$PROJECT_DIR$/venv/src/test.py" />
       </list>
     </option>
   </component>
@@ -235,7 +245,21 @@
       <option name="project" value="LOCAL" />
       <updated>1532284258011</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="edited log file path">
+      <created>1532744024869</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1532744024869</updated>
+    </task>
+    <task id="LOCAL-00005" summary="edited log file path">
+      <created>1532744128103</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1532744128103</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -244,8 +268,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27506775" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27506775" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3292683" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26028278" />
@@ -333,11 +357,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/src/central.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="169" column="99" selection-start-line="169" selection-start-column="99" selection-end-line="169" selection-end-column="99" />
+        <state relative-caret-position="-1921">
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
           <folding>
             <element signature="e#28#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/src/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
         </state>
       </provider>
     </entry>
