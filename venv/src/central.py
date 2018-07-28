@@ -1,6 +1,6 @@
 #!/usr/lib/python
 
-# import openhab as openHAB
+import openhab as openHAB
 import socket
 import logging as logger
 import time
@@ -10,11 +10,11 @@ import configparser
 # Read in pi configurations
 parser = configparser.RawConfigParser()
 # parser.read(r'/home/pi/Dev/Central/venv/src/pi-config.ini')
-parser.read(r'C:/Users/Mark/PycharmProjects/CentralPi/venv/pi-config.ini')
+# parser.read(r'C:/Users/Mark/PycharmProjects/CentralPi/venv/pi-config.ini')
 
 # Gather data from openhab
 base_url = 'http://localhost:8080/rest'
-# openhab = openHAB(base_url)
+openhab = openHAB(base_url)
 
 # Set log configuration
 logger.basicConfig(filename='central.log', level=logger.DEBUG)
@@ -188,7 +188,9 @@ def init():
     con = (getIpAddress('central'), getTcpPort('central'))
     client.bind(con)
 
+#
+# client.bind(('localhost', 10000))
+# tcpListener()
+# sendMessage('central', 'TEST', 'this is a test message!')
 
-client.bind(('localhost', 10000))
-tcpListener()
-sendMessage('central', 'TEST', 'this is a test message!')
+print("test again")
