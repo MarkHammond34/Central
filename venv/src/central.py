@@ -7,11 +7,13 @@ import configparser
 
 # Read in pi configurations
 parser = configparser.RawConfigParser()
-parser.read(r'/home/pi/Dev/Central/venv/src/pi-config.ini')
+# parser.read(r'/home/pi/Dev/Central/venv/src/pi-config.ini')
+parser.read(r'C:/Users/Mark/PycharmProjects/CentralPi/venv/pi-config.ini')
+
 
 # Gather data from openhab
 base_url = 'http://localhost:8080/rest'
-openhab = openHAB(base_url)
+# openhab = openHAB(base_url)
 
 # Set log configuration
 logger.basicConfig(filename='central.log', level=logger.DEBUG)
@@ -105,13 +107,12 @@ def getPiName( ip ):
     return 'NULL'
 
 def tcpListener():
-    client.listen(99)
-    logEvent('SUCCESS', 'LISTENING FOR TCP CONNECTIONS','tcpListener')
+    client.listen(1)
+    logEvent('SUCCESS', 'LISTENING FOR TCP CONNECTIONS...','tcpListener')
 
     while True:
         # waiting for a connection
         connection, client_address = client.accept()
-
         # if connection is created
         if connection:
             try:
@@ -140,9 +141,43 @@ def tcpListener():
 def sendMessage( piName, messageType, message):
     ip = getIpAddress(piName)
     port = getTcpPort(piName)
+    print(ip)
     # successfully got ip and port
     if ip != 'NULL' & port != 'NULL':
-        server_address = (ip, port)
-        client.bind(server_address)
+        # client.connect((ip, port))
+        client.connect(('localhost', 10000))
+        # log event
+        try:
+            # format message
+            m = '<' + messageType + '>\n'
+            m += message
+            sock.sendall(m)
 
-print('test')
+            # Look for the confirmation response
+            amount_received = 0
+            amount_expected = 8
+
+            while amount_received < amount_expected:
+                response = sock.recv(16)
+                amount_received += len(response)
+                logEvent('SUCCESS', 'WAITING FOR RESPONSE FROM \'' + piName + '\'...', 'sendMessage')
+
+            if response == 'SUCCESS':
+                logEvent('SUCCESS', 'MESSAGE SEND SUCCESSFULLY TO \'' + piName + '\'', 'sendMessage')
+            elif response == 'FAILURE':
+                logEvent('ERROR', 'MESSAGE FAILED TO SEND TO \'' + piName + '\'', 'sendMessage')
+            else:
+                logEvent('ERROR', 'RESPONSE FROM \'' + piName + '\' NOT RECOGNIZABLE', 'sendMessage')
+
+        finally:
+            logEvent('SUCCESS', 'CONNECTION WITH \'' + piName + '\' CLOSED', 'sendMessage()')
+            client.close()
+
+def init():
+    con = (getIpAddress('central'), getTcpPort('central'))
+    client.bind(con)
+
+
+client.bind(('localhost', 10000))
+tcpListener()
+sendMessage('central', 'TEST', 'this is a test message!')

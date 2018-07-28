@@ -26,3 +26,15 @@ INFO:root: -- 2018-07-21 19:08:46 --> PI NAME FOUND FOR '10.0.0.55' Function -> 
 INFO:root: -- 2018-07-21 19:09:10 --> IP ADDRESS FOUND FOR 'central' Function -> getIpAddress
 INFO:root: -- 2018-07-21 19:09:10 --> PI NAME FOUND FOR '10.0.0.55' Function -> getPiName
 DEBUG:root: -- 2018-07-21 19:09:40 --> IP ADDRESS NOT FOUND FOR 'ssffd' Function -> getIpAddress
+INFO:root: -- 2018-07-27 20:17:22 --> IP ADDRESS FOUND FOR 'central' Function -> getIpAddress
+INFO:root: -- 2018-07-27 20:17:41 --> IP ADDRESS FOUND FOR 'central' Function -> getIpAddress
+INFO:root: -- 2018-07-27 20:19:35 --> IP ADDRESS FOUND FOR 'central' Function -> getIpAddress
+INFO:root: -- 2018-07-27 20:19:35 --> LISTENING FOR TCP CONNECTIONS Function -> tcpListener
+INFO:root: -- 2018-07-27 20:20:32 --> IP ADDRESS FOUND FOR 'central' Function -> getIpAddress
+INFO:root: -- 2018-07-27 20:20:32 --> LISTENING FOR TCP CONNECTIONS Function -> tcpListener
+INFO:root: -- 2018-07-27 20:51:26 --> LISTENING FOR TCP CONNECTIONS Function -> tcpListener
+INFO:root: -- 2018-07-27 20:52:31 --> LISTENING FOR TCP CONNECTIONS... Function -> tcpListener
+INFO:root: -- 2018-07-27 20:53:25 --> LISTENING FOR TCP CONNECTIONS... Function -> tcpListener
+INFO:root: -- 2018-07-27 20:53:36 --> LISTENING FOR TCP CONNECTIONS... Function -> tcpListener
+INFO:root: -- 2018-07-27 20:54:09 --> LISTENING FOR TCP CONNECTIONS... Function -> tcpListener
+INFO:root: -- 2018-07-27 20:54:33 --> LISTENING FOR TCP CONNECTIONS... Function -> tcpListener
